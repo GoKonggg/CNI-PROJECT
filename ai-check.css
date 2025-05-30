@@ -1,0 +1,164 @@
+/* fact-check.css */
+:root {
+    --primary-blue: #005A9C;
+    --light-gray: #f4f7f9;
+    --danger-red-bg: #ffebee;
+    --danger-red-text: #c62828;
+    --success-green-bg: #e8f5e9;
+    --success-green-text: #2e7d32;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--light-gray);
+    color: #333;
+    padding-bottom: 80px; /* Ruang untuk bottom nav */
+}
+
+.page-container {
+    padding: 20px;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.page-header h1 {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.page-header p {
+    font-size: 16px;
+    color: #6c757d;
+    margin-top: 8px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Styling untuk form input */
+#fact-check-form textarea {
+    width: 100%;
+    height: 150px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    resize: vertical;
+}
+
+.form-button {
+    width: 100%;
+    padding: 18px;
+    border: none;
+    border-radius: 12px;
+    background-color: var(--primary-blue);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-button:hover {
+    background-color: #004a80;
+}
+
+.form-button.secondary {
+    background-color: #e9ecef;
+    color: #333;
+}
+.form-button.secondary:hover {
+    background-color: #ced4da;
+}
+
+
+/* Styling untuk bagian hasil */
+.hidden {
+    display: none;
+}
+
+.verdict-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.verdict-card.hoax {
+    background-color: var(--danger-red-bg);
+    color: var(--danger-red-text);
+}
+
+.verdict-card i {
+    font-size: 32px;
+}
+
+.verdict-card h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.explanation-card, .sources-card {
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.explanation-card h4, .sources-card h4 {
+    margin: 0 0 10px;
+    font-size: 16px;
+}
+
+.sources-card ul {
+    margin: 0;
+    padding-left: 20px;
+}
+.sources-card ul li a {
+    color: var(--primary-blue);
+    text-decoration: none;
+}
+
+
+/* Navigasi Bawah */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: space-around;
+    padding: 8px 0;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.05);
+    border-top: 1px solid #f0f0f0;
+    z-index: 100;
+}
+
+.nav-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #606770;
+    font-size: 10px;
+    flex: 1;
+}
+
+.nav-link i { font-size: 26px; margin-bottom: 4px; }
+.nav-link.active { color: var(--primary-blue); }

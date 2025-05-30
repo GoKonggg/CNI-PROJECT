@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Fact Check - isFamily</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="ai-check.css"> </head>
+<body>
+
+    <div class="page-container">
+        
+        <div id="input-section">
+            <header class="page-header">
+                <h1><i class='bx bxs-check-shield'></i> AI Cek Fakta</h1>
+                <p>Tempel teks atau ketik klaim yang ingin Anda verifikasi seputar kesehatan dan parenting.</p>
+            </header>
+
+            <main>
+                <form id="fact-check-form">
+                    <textarea placeholder="Contoh: 'Memberi madu pada bayi di bawah 1 tahun itu aman'"></textarea>
+                    <button type="submit" class="form-button">Cek Fakta Sekarang</button>
+                </form>
+            </main>
+        </div>
+
+        <div id="result-section" class="hidden">
+            <header class="page-header">
+                <h1>Hasil Analisis</h1>
+            </header>
+
+            <main>
+                <div class="verdict-card hoax">
+                    <i class='bx bxs-x-circle'></i>
+                    <h3>Klaim Terindikasi Hoax / Misinformasi</h3>
+                </div>
+
+                <div class="explanation-card">
+                    <h4>Penjelasan</h4>
+                    <p>Klaim bahwa madu aman untuk bayi di bawah 1 tahun adalah **tidak benar** dan berbahaya. Madu dapat mengandung spora bakteri *Clostridium botulinum* yang bisa menyebabkan botulisme pada bayi, sebuah kondisi serius yang menyerang sistem saraf.</p>
+                    <p>Sistem pencernaan bayi yang belum matang tidak mampu melawan spora ini, berbeda dengan anak-anak yang lebih tua dan orang dewasa.</p>
+                </div>
+
+                <div class="sources-card">
+                    <h4>Sumber Terpercaya</h4>
+                    <ul>
+                        <li><a href="#" target="_blank">World Health Organization (WHO) - Infant Botulism</a></li>
+                        <li><a href="#" target="_blank">Ikatan Dokter Anak Indonesia (IDAI) - Pemberian Madu</a></li>
+                    </ul>
+                </div>
+
+                <button id="check-another-button" class="form-button secondary">Cek Klaim Lain</button>
+            </main>
+        </div>
+
+    </div>
+
+    <nav class="bottom-nav">
+        <a href="home.html" class="nav-link">
+            <i class='bx bxs-home'></i>
+            <span>Home</span>
+        </a>
+        <a href="explore.html" class="nav-link">
+            <i class='bx bxs-compass'></i>
+            <span>Explore</span>
+        </a>
+        <a href="ai-check.html" class="nav-link active">
+            <i class='bx bxs-check-shield'></i>
+            <span>AI Cek Fakta</span>
+        </a>
+        <a href="courses.html" class="nav-link">
+            <i class='bx bxs-graduation'></i>
+            <span>Course</span>
+        </a>
+        <a href="profile.html" class="nav-link">
+            <i class='bx bxs-user-circle'></i>
+            <span>Profile</span>
+        </a>
+    </nav>
+
+</body>
+<script src="fact-check.js"></script> </html>
