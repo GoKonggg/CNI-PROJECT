@@ -6,54 +6,272 @@
     <title>Home - isFamily</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="home.css">
 </head>
 <body>
 
-    <header class="main-header">
-        <div class="logo">is<strong>Family</strong></div>
-        <nav class="main-nav">
-            <a href="#">Profile</a>
-        </nav>
+    <header class="top-header">
+        <h1 class="logo">isFamily</h1>
+        <div class="header-icons">
+            <i class='bx bx-search'></i>
+            <i class='bx bx-bell'></i>
+        </div>
     </header>
 
-    <main class="main-container">
-        <section class="welcome-section">
-            <h1>Welcome back, User!</h1>
-            <p>What would you like to explore today?</p>
-        </section>
+    <main class="feed-container">
+        <!-- === CARD: VIDEO POST TEMPLATE === -->
+<article class="post-card">
+  <header class="post-header">
+    <div class="author-info">
+      <img src="./ASSET/isLogo.png" alt="Author avatar" class="author-avatar">
+      <span>isFamily Official</span>
+    </div>
+    <i class='bx bx-dots-horizontal-rounded'></i>
+  </header>
 
-        <section class="content-section">
-            <h2>Featured Articles</h2>
-            <div class="article-grid">
-                <div class="article-card">
-                    <img src="https://i.ibb.co/3k5gC9n/placeholder-article-1.png" alt="Understanding baby sleep cycles">
-                    <h3>Understanding Baby's Sleep Cycles</h3>
-                    <p>Learn the patterns behind your baby's sleep and how to adapt.</p>
-                </div>
-                <div class="article-card">
-                    <img src="https://i.ibb.co/L5VbKLX/placeholder-article-2.png" alt="Healthy snacks for toddlers">
-                    <h3>Top 5 Healthy Snacks for Toddlers</h3>
-                    <p>Quick and easy snack ideas that are both nutritious and delicious.</p>
-                </div>
-            </div>
-        </section>
+  <!-- Media section – cukup ganti src & poster -->
+  <div class="post-media">
+    <video
+      src="./ASSET/mixkit-young-mother-carrying-her-baby-in-her-arms-49953-hd-ready.mp4"
+      poster="{{THUMBNAIL_URL}}"
+      autoplay loop muted playsinline
+      preload="metadata">
+    </video>
+  </div>
 
-        <section class="content-section">
-            <h2>Recent Discussions</h2>
-            <div class="discussion-list">
-                <div class="discussion-item">
-                    <p class="discussion-title">How do you handle picky eaters? Looking for tips!</p>
-                    <span class="discussion-meta">by Jane D. • 12 replies</span>
-                </div>
-                <div class="discussion-item">
-                    <p class="discussion-title">Best strollers for city living?</p>
-                    <span class="discussion-meta">by John S. • 8 replies</span>
-                </div>
-            </div>
-        </section>
+  <div class="post-content">
+    <div class="post-actions">
+      <div>
+        <i class='bx bx-heart'></i>
+        <i class='bx bx-message-square-dots'></i>
+        <i class='bx bx-share'></i>
+      </div>
+      <div>
+        <i class='bx bx-bookmark'></i>
+      </div>
+    </div>
+    <h2 class="post-title">Permainan Boneka: Stimulasi Sensorik Bayi 6-12 Bulan</h2>
+    <p class="post-excerpt">Gunakan boneka berwarna cerah untuk melatih koordinasi mata-tangan dan mengenalkan tekstur sejak dini.</p>
+    <a href="{{LINK_DETAIL}}" class="read-more">Lihat selengkapnya</a>
+  </div>
+</article>
+
+<!-- === CARD: VIDEO POST TEMPLATE === -->
+<article class="post-card">
+  <header class="post-header">
+    <div class="author-info">
+      <img src="{{AVATAR_URL}}" alt="Author avatar" class="author-avatar">
+      <span>dr. Hana, SpA(K)</span>
+    </div>
+    <i class='bx bx-dots-horizontal-rounded'></i>
+  </header>
+
+  <!-- Media section – cukup ganti src & poster -->
+  <div class="post-media">
+    <video
+      src="./ASSET/mixkit-affectionate-mother-lying-with-her-baby-50045-hd-ready.mp4"
+      poster="{{THUMBNAIL_URL}}"
+      autoplay loop muted playsinline
+      preload="metadata">
+    </video>
+  </div>
+
+  <div class="post-content">
+    <div class="post-actions">
+      <div>
+        <i class='bx bx-heart'></i>
+        <i class='bx bx-message-square-dots'></i>
+        <i class='bx bx-share'></i>
+      </div>
+      <div>
+        <i class='bx bx-bookmark'></i>
+      </div>
+    </div>
+    <h2 class="post-title">Rutinitas Bonding Ibu & Bayi Sebelum Tidur</h2>
+    <p class="post-excerpt"> Sentuhan lembut, lagu nina-bobo, dan kontak mata hangat bantu bayi
+  merasa aman sekaligus meningkatkan kualitas tidurnya.</p>
+    <a href="{{LINK_DETAIL}}" class="read-more">Lihat selengkapnya</a>
+  </div>
+</article>
+
+<!-- === CARD: VIDEO POST TEMPLATE === -->
+<article class="post-card">
+  <header class="post-header">
+    <div class="author-info">
+      <img src="{{AVATAR_URL}}" alt="Author avatar" class="author-avatar">
+      <span>Mommy Coach Nisa</span>
+    </div>
+    <i class='bx bx-dots-horizontal-rounded'></i>
+  </header>
+
+  <!-- Media section – cukup ganti src & poster -->
+  <div class="post-media">
+    <video
+      src="./ASSET/mixkit-loving-mother-holding-and-lulling-her-baby-49970-hd-ready.mp4"
+      poster="{{THUMBNAIL_URL}}"
+      autoplay loop muted playsinline
+      preload="metadata">
+    </video>
+  </div>
+
+  <div class="post-content">
+    <div class="post-actions">
+      <div>
+        <i class='bx bx-heart'></i>
+        <i class='bx bx-message-square-dots'></i>
+        <i class='bx bx-share'></i>
+      </div>
+      <div>
+        <i class='bx bx-bookmark'></i>
+      </div>
+    </div>
+    <h2 class="post-title">Teknik Menidurkan Bayi dalam 5 Menit</h2>
+    <p class="post-excerpt">Gendong, goyang pelan, lalu hum lagu lembut—trik cepat menidurkan bayi tanpa drama tangis panjang.</p>
+    <a href="{{LINK_DETAIL}}" class="read-more">Lihat selengkapnya</a>
+  </div>
+</article>
+
+<!-- === CARD: VIDEO POST TEMPLATE === -->
+<article class="post-card">
+  <header class="post-header">
+    <div class="author-info">
+      <img src="{{AVATAR_URL}}" alt="Author avatar" class="author-avatar">
+      <span>Ayah Cerdas</span>
+    </div>
+    <i class='bx bx-dots-horizontal-rounded'></i>
+  </header>
+
+  <!-- Media section – cukup ganti src & poster -->
+  <div class="post-media">
+    <video
+      src="./ASSET/father.mp4"
+      poster="{{THUMBNAIL_URL}}"
+      autoplay loop muted playsinline
+      preload="metadata">
+    </video>
+  </div>
+
+  <div class="post-content">
+    <div class="post-actions">
+      <div>
+        <i class='bx bx-heart'></i>
+        <i class='bx bx-message-square-dots'></i>
+        <i class='bx bx-share'></i>
+      </div>
+      <div>
+        <i class='bx bx-bookmark'></i>
+      </div>
+    </div>
+    <h2 class="post-title"> Quality Time Seru Bersama Ayah di Luar Rumah</h2>
+    <p class="post-excerpt">Jalan sore sambil bercanda tak hanya bikin bayi tertawa—ia juga belajar bahasa, motorik, dan rasa percaya diri.</p>
+    <a href="{{LINK_DETAIL}}" class="read-more">Lihat selengkapnya</a>
+  </div>
+</article>
+
+<!-- === CARD: VIDEO POST TEMPLATE === -->
+<article class="post-card">
+  <header class="post-header">
+    <div class="author-info">
+      <img src="{{AVATAR_URL}}" alt="Author avatar" class="author-avatar">
+      <span>Maya Putri, M.Psi</span>
+    </div>
+    <i class='bx bx-dots-horizontal-rounded'></i>
+  </header>
+
+  <!-- Media section – cukup ganti src & poster -->
+  <div class="post-media">
+    <video
+      src="./ASSET/vid1.mp4"
+      poster="{{THUMBNAIL_URL}}"
+      autoplay loop muted playsinline
+      preload="metadata">
+    </video>
+  </div>
+
+  <div class="post-content">
+    <div class="post-actions">
+      <div>
+        <i class='bx bx-heart'></i>
+        <i class='bx bx-message-square-dots'></i>
+        <i class='bx bx-share'></i>
+      </div>
+      <div>
+        <i class='bx bx-bookmark'></i>
+      </div>
+    </div>
+    <h2 class="post-title">Kenali Tanda-tanda Emosi Positif pada Bayi</h2>
+    <p class="post-excerpt">Senyum lebar, tepuk tangan, dan suara cooing menandakan bayi merasa aman
+  dan bahagia—pahami sinyal ini untuk bonding lebih kuat.</p>
+    <a href="{{LINK_DETAIL}}" class="read-more">Lihat selengkapnya</a>
+  </div>
+</article>
+
+<!-- === CARD: VIDEO POST TEMPLATE === -->
+<article class="post-card">
+  <header class="post-header">
+    <div class="author-info">
+      <img src="{{AVATAR_URL}}" alt="Author avatar" class="author-avatar">
+      <span>Fisioterapis Rara</span>
+    </div>
+    <i class='bx bx-dots-horizontal-rounded'></i>
+  </header>
+
+  <!-- Media section – cukup ganti src & poster -->
+  <div class="post-media">
+    <video
+      src="./ASSET/vid2.mp4"
+      poster="{{THUMBNAIL_URL}}"
+      autoplay loop muted playsinline
+      preload="metadata">
+    </video>
+  </div>
+
+  <div class="post-content">
+    <div class="post-actions">
+      <div>
+        <i class='bx bx-heart'></i>
+        <i class='bx bx-message-square-dots'></i>
+        <i class='bx bx-share'></i>
+      </div>
+      <div>
+        <i class='bx bx-bookmark'></i>
+      </div>
+    </div>
+    <h2 class="post-title">Tahap Merangkak: Stimulus Motorik 6–9 Bulan</h2>
+    <p class="post-excerpt">Gunakan balon warna-warni di karpet empuk untuk memancing bayi bergerak,
+  memperkuat otot lengan dan punggungnya.</p>
+    <a href="{{LINK_DETAIL}}" class="read-more">Lihat selengkapnya</a>
+  </div>
+</article>
+
+
+
     </main>
+
+    <nav class="bottom-nav">
+        <a href="home.html" class="nav-link active">
+            <i class='bx bxs-home'></i>
+            <span>Home</span>
+        </a>
+        <a href="#" class="nav-link">
+            <i class='bx bxs-book-bookmark'></i>
+            <span>Pustaka</span>
+        </a>
+        <a href="#" class="nav-link">
+            <i class='bx bxs-check-shield'></i>
+            <span>AI Cek Fakta</span>
+        </a>
+        <a href="#" class="nav-link">
+            <i class='bx bxs-graduation'></i>
+            <span>Kursus</span>
+        </a>
+        <a href="#" class="nav-link">
+            <i class='bx bxs-user-circle'></i>
+            <span>Profil</span>
+        </a>
+    </nav>
 
 </body>
 </html>
