@@ -1,0 +1,132 @@
+/* login.css */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    /* Warna background diambil dari gradient splash screen */
+    background: linear-gradient(170deg, #61dafb, #34c1f7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.form-container {
+    padding: 20px;
+}
+
+.form-box {
+    background-color: #FFFFFF;
+    padding: 30px 40px;
+    border-radius: 24px;
+    box-shadow: 0px 10px 40px rgba(0, 90, 156, 0.15); /* Shadow senada biru */
+    width: 90%; /* Lebar card menjadi 90% dari container */
+    max-width: 600px; /* Tambah batas lebar maksimum agar tidak terlalu lebar di layar besar */
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* Styling untuk tombol tab */
+.tab-container {
+    display: flex;
+    margin-bottom: 30px;
+    background-color: #e9ecef;
+    border-radius: 12px;
+    padding: 5px;
+}
+
+.tab-button {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    background-color: transparent;
+    color: #6c757d;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.tab-button.active {
+    background-color: #FFFFFF;
+    color: #005A9C; /* Warna biru brand */
+    box-shadow: 0px 2px 10px rgba(0, 90, 156, 0.1); /* Shadow senada biru */
+}
+
+/* Konten Form */
+.form-content {
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+.form-content.active {
+    display: block;
+}
+
+.form-content h2 {
+    text-align: center;
+    margin: 0 0 25px;
+    font-size: 28px;
+    color: #333;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.input-group small {
+    display: block; /* Membuat teks berada di baris baru */
+    margin-top: 5px; /* Memberi sedikit jarak dari kotak input */
+    font-size: 12px;
+    color: #6c757d; /* Warna abu-abu yang lembut */
+    text-align: left; /* Pastikan teks rata kiri */
+}
+
+.form-button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 8px;
+    /* Warna tombol biru brand */
+    background-color: #005A9C;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-button:hover {
+    background-color: #004a80;
+}
+
+/* Animasi untuk transisi form */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

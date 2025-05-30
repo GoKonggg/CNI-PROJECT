@@ -1,0 +1,207 @@
+/* === CSS Reset and Basic Setup === */
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #333; /* Warna latar belakang halaman untuk preview */
+    font-family: 'Poppins', sans-serif;
+}
+
+/* === Main Splash Screen Container === */
+.splash-screen {
+    width: 480px;
+    height: 854px; 
+    /* WARNA BARU: Gradient biru langit yang cerah dan modern */
+    background: linear-gradient(170deg, #61dafb, #34c1f7); 
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    justify-content: center;
+}
+
+/* === Decorative Elements === */
+.circle {
+    position: absolute;
+    /* WARNA BARU: Warna lingkaran lebih terang dan transparan */
+    background-color: rgba(175, 251, 252, 0.582);
+    border-radius: 50%;
+    z-index: 1;
+    /* Upgrade: Animasi rotasi halus pada background */
+    animation: rotate 40s linear infinite;
+}
+
+.circle-1 {
+    width: 300px;
+    height: 300px;
+    top: -100px;
+    right: -150px;
+    animation-direction: reverse; /* Agar berputar berlawanan arah */
+}
+
+.circle-2 {
+    width: 300px;
+    height: 300px;
+    bottom: -120px;
+    left: -150px;
+}
+
+/* Dots Container & Individual Dots */
+.dots-container {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    /* WARNA BARU: Kuning cerah seperti matahari */
+    background-color: #FFDE03; 
+    border-radius: 50%;
+    transform: scale(0); /* Mulai dari skala 0 untuk animasi pop-in */
+    /* Upgrade: Animasi pop-in yang lebih playful */
+    animation: popIn 0.5s ease-out forwards;
+}
+
+/* Upgrade: Staggered animation (muncul satu per satu) untuk setiap dot */
+.dot:nth-child(1) { animation-delay: 0.4s; }
+.dot:nth-child(2) { animation-delay: 0.5s; }
+.dot:nth-child(3) { animation-delay: 0.6s; }
+.dot:nth-child(4) { animation-delay: 0.7s; }
+.dot:nth-child(5) { animation-delay: 0.8s; }
+.dot:nth-child(6) { animation-delay: 0.9s; }
+.dot:nth-child(7) { animation-delay: 1.0s; }
+.dot:nth-child(8) { animation-delay: 1.1s; }
+
+/* === Content Elements === */
+.content {
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-text {
+    color: white;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 0;
+    margin-bottom: 25px;
+    /* Animasi entrance dasar */
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.main-card {
+    /* WARNA BARU: Putih bersih untuk kontras maksimal */
+    background-color: #FFFFFF; 
+    padding: 30px;
+    border-radius: 24px;
+    text-align: center;
+    width: 65%;
+    /* WARNA BARU: Shadow dengan sedikit hint warna biru agar lebih menyatu */
+    box-shadow: 0px 15px 35px rgba(0, 90, 156, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out 0.2s forwards;
+}
+
+.main-card img {
+    max-width: 100%;
+    height: auto;
+    /* Upgrade: Animasi zoom-in pada gambar saat kartu muncul */
+    transform: scale(0.8);
+    opacity: 0;
+    animation: scaleIn 0.8s ease-out 0.5s forwards;
+}
+
+/* Cari class .brand-name di CSS kamu */
+.brand-name {
+    font-size: 65px;
+    color: #005A9C; 
+    /* UBAH BARIS INI: dari 15px menjadi angka yang lebih kecil */
+    margin: 0 0 0 0; /* Coba ganti ke 5px atau bahkan 0 */
+    font-weight: 400;
+}
+
+.brand-name strong {
+    font-weight: 800;
+}
+
+/* Style for the new tagline */
+.tagline {
+    font-size: 16px;
+    /* A softer color than the brand name */
+    color: #6c757d; 
+    margin-top: 0px;
+    font-weight: 400; /* Ensures the font is not bold */
+     opacity: 0; /* Tagline mulai dalam keadaan tidak terlihat */
+    animation: fadeInUpSmall 0.6s ease-out 0.7s forwards; /* Tambahkan animasi */
+}
+
+/* === ANIMATION DEFINITIONS === */
+
+/* Animasi Fade In & Slide Up (dari bawah ke atas) */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animasi Scale In (dari kecil ke besar) */
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Animasi Pop In (untuk titik-titik) */
+@keyframes popIn {
+    from {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+/* Animasi rotasi untuk lingkaran background */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fadeInUpSmall {
+  from {
+    opacity: 0;
+    transform: translateY(10px); /* Slide up sedikit saja */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
