@@ -1,0 +1,116 @@
+/* onboarding-here.css (Cleaned Version) */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #20c9e1;
+    color: #000;
+    padding: 50px 0;
+}
+
+.onboarding-container {
+    width: 90%;
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.profile-form h1 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.input-group {
+    margin-bottom: 25px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.input-group input[type="text"],
+.input-group input[type="date"] {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    box-sizing: border-box;
+    color: #333;
+}
+
+.card-choice-group {
+    display: flex;
+    gap: 15px;
+    align-items: stretch;
+}
+
+.card-option {
+    flex: 1;
+    display: flex;
+}
+
+.card-label {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Tetap center untuk alignment horizontal */
+    
+    /* --- UBAH INI --- */
+    /* Dari 'center' menjadi 'flex-start' agar konten merapat ke atas */
+    justify-content: flex-start; 
+    
+    /* --- UBAH INI --- */
+    /* Kita atur padding secara manual untuk keseimbangan visual */
+    padding: 25px 15px 15px;
+    
+    background-color: #FFFFFF;
+    border-radius: 16px;
+    cursor: pointer;
+    border: 3px solid transparent;
+    transition: all 0.2s ease-in-out;
+    text-align: center;
+    min-height: 140px;
+    box-sizing: border-box;
+}
+
+.card-label img {
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 16px;
+    color:#000;
+    margin-top: 0px;
+}
+
+.card-option input[type="radio"] {
+    display: none;
+}
+
+.card-option input[type="radio"]:checked + .card-label {
+    border-color: #0d6efd;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(13, 110, 253, 0.2);
+}
+
+.continue-button {
+    width: 100%;
+    padding: 18px;
+    margin-top: 40px;
+    border: none;
+    background-color: #FFFFFF;
+    color: #20c9e1;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 16px;
+}

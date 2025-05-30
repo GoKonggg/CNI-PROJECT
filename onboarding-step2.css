@@ -1,0 +1,136 @@
+/* onboarding-step2.css */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #20c9e1;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding-top: 50px;
+}
+
+.onboarding-container {
+    width: 90%;
+    max-width: 450px;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.profile-form h1 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.input-group {
+    margin-bottom: 25px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.input-group input[type="text"],
+.input-group input[type="date"] {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    box-sizing: border-box;
+    color: #333;
+}
+
+.input-group input[type="date"] {
+    position: relative;
+}
+
+/* Styling untuk pilihan gender */
+/* Cari bagian styling untuk pilihan gender */
+.card-choice-group {
+    display: flex;
+    gap: 15px;
+}
+
+.card-option {
+    flex: 1;
+    /* --- TAMBAHAN --- */
+    /* Membuat .card-option menjadi flex container juga.
+       Ini akan membuat .card-label di dalamnya "stretch" secara default. */
+    display: flex;
+}
+
+.card-label {
+    /* --- TAMBAHAN --- */
+    /* Memastikan label mengisi 100% lebar dari parent-nya (.card-option) */
+    width: 100%;
+
+    /* Style di bawah ini sebagian besar tetap sama */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    background-color: #FFFFFF;
+    border-radius: 16px;
+    cursor: pointer;
+    border: 3px solid transparent;
+    transition: all 0.2s ease-in-out;
+    text-align: center;
+    min-height: 140px;
+    box-sizing: border-box; /* Pastikan padding tidak menambah ukuran */
+}
+
+
+.card-label img {
+    height: 60px;
+    width: 70%;
+    margin-bottom: 10px;
+}
+
+.card-label span {
+    font-weight: 600;
+    font-size: 14px;
+    color: #333;
+    white-space: nowrap;
+}
+
+.card-option input[type="radio"] {
+    display: none;
+}
+
+.card-option input[type="radio"]:checked + .card-label {
+    border-color: #0d6efd;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(13, 110, 253, 0.2);
+}
+
+.card-choice-group.three-options .card-label {
+    min-height: 120px;
+}
+
+.card-choice-group.three-options .card-label img {
+    height: 50px;
+}
+
+/* Tombol Continue */
+.continue-button {
+    width: 100%;
+    padding: 18px;
+    margin-top: 40px;
+    border: none;
+    background-color: #FFFFFF;
+    color: #20c9e1;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}

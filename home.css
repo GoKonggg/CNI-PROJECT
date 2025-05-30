@@ -1,0 +1,125 @@
+/* home.css */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f7f9; /* Warna latar yang netral dan bersih */
+    color: #333;
+}
+
+/* Header & Navigasi */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 600;
+    color: #005A9C;
+}
+
+.logo strong {
+    font-weight: 800;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+}
+
+/* Konten Utama */
+.main-container {
+    padding: 25px;
+}
+
+.welcome-section h1 {
+    font-size: 26px;
+    margin: 0 0 5px 0;
+}
+
+.welcome-section p {
+    margin: 0 0 30px 0;
+    color: #6c757d;
+}
+
+.content-section {
+    margin-bottom: 40px;
+}
+
+.content-section h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+}
+
+/* Grid untuk Artikel */
+.article-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Default 1 kolom untuk mobile */
+    gap: 20px;
+}
+
+.article-card {
+    background-color: #FFFFFF;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.article-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.article-card h3 {
+    font-size: 18px;
+    margin: 15px;
+}
+
+.article-card p {
+    font-size: 14px;
+    color: #6c757d;
+    margin: 0 15px 15px 15px;
+}
+
+/* Daftar Diskusi */
+.discussion-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.discussion-item {
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.discussion-title {
+    margin: 0 0 8px 0;
+    font-weight: 600;
+}
+
+.discussion-meta {
+    font-size: 12px;
+    color: #888;
+}
+
+/* Media Query untuk layar lebih besar (misal: tablet) */
+@media (min-width: 768px) {
+    .article-grid {
+        /* Jadi 2 kolom jika lebar layar minimal 768px */
+        grid-template-columns: 1fr 1fr;
+    }
+}

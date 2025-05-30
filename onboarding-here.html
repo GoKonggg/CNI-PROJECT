@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baby's Profile</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="onboarding-here.css">
+</head>
+<body>
+    <div class="onboarding-container">
+        <form class="profile-form">
+            <h1>Complete your baby's profile</h1>
+
+            <div class="input-group">
+                <label for="babyname">My baby's name is:</label>
+                <input type="text" id="babyname" placeholder="Write your baby's name">
+            </div>
+
+            <div class="input-group">
+                <label for="dob">Date of birth:</label>
+                <input type="date" id="dob">
+            </div>
+
+            <div class="input-group">
+                <label>My baby is a:</label>
+                <div class="card-choice-group">
+                    <div class="card-option">
+                        <input type="radio" id="girl" name="gender" value="girl" checked>
+                        <label for="girl" class="card-label">
+                            <img src="./ASSET/baby-girl.png" alt="Baby girl">
+                            <p>Girl</p>
+                        </label>
+                    </div>
+                    <div class="card-option">
+                        <input type="radio" id="boy" name="gender" value="boy">
+                        <label for="boy" class="card-label">
+                            <img src="./ASSET/baby-boy.png" alt="Baby boy">
+                            <p>Boy</p>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" class="continue-button">CONTINUE</button>
+        </form>
+    </div>
+    <script src = "onboarding-here.js"></script>
+</body>
+</html>
