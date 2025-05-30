@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Your Profile</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="onboarding.css">
+</head>
+<body>
+    <div class="onboarding-container">
+        <form class="profile-form">
+            <h1>Create your profile</h1>
+
+            <div class="input-group">
+                <label for="firstname">My firstname is</label>
+                <input type="text" id="firstname" placeholder="Write your name">
+            </div>
+
+            <div class="input-group">
+                <label for="surname">My surname is</label>
+                <input type="text" id="surname" placeholder="Write your name">
+            </div>
+
+            <div class="input-group">
+                <label>I'm a</label>
+                <div class="choice-group">
+                    <input type="radio" id="mom" name="role" value="mom" checked>
+                    <label for="mom" class="choice-button">Mom</label>
+
+                    <input type="radio" id="dad" name="role" value="dad">
+                    <label for="dad" class="choice-button">Dad</label>
+
+                    <input type="radio" id="other" name="role" value="other">
+                    <label for="other" class="choice-button">Other</label>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label>My baby is</label>
+                <div class="card-choice-group">
+                    <div class="card-option">
+                        <input type="radio" id="baby-here" name="baby_status" value="here" checked>
+                        <label for="baby-here" class="card-label">
+                            <img src="./ASSET/baby1.png" alt="Parent with a baby">
+                            <span>       
+                                is Here</span>
+                        </label>
+                    </div>
+                    <div class="card-option">
+                        <input type="radio" id="baby-on-the-way" name="baby_status" value="on the way">
+                        <label for="baby-on-the-way" class="card-label">
+                            <img src="./ASSET/bayi-1.png" alt="Pregnant woman">
+                            <span>On the way</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" class="continue-button">CONTINUE</button>
+        </form>
+    </div>
+</body>
+</html>

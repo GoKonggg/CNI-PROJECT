@@ -1,0 +1,138 @@
+/* onboarding.css */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    /* Warna background diambil dari gambar referensi */
+    background-color: #4ED7F1;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Konten mulai dari atas */
+    min-height: 100vh;
+    padding-top: 50px;
+}
+
+.onboarding-container {
+    width: 100%;
+    max-width: 450px;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.profile-form h1 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.input-group {
+    margin-bottom: 25px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.input-group input[type="text"] {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/* Sembunyikan radio button asli */
+.choice-group input[type="radio"],
+.card-option input[type="radio"] {
+    display: none;
+}
+
+/* Styling untuk pilihan "I'm a" */
+.choice-group {
+    display: flex;
+    gap: 15px;
+}
+
+.choice-button {
+    padding: 12px 25px;
+    background-color: #A1E3F9;
+    color: #FFFFFF;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: 600;
+}
+
+/* KUNCI UTAMA: Style untuk label saat radio button yang terhubung dipilih */
+.choice-group input[type="radio"]:checked + .choice-button {
+    background-color: #FFFFFF;
+    color: #20c9e1;
+    
+}
+
+/* Styling untuk pilihan "My baby is" */
+.card-choice-group {
+    display: flex;
+    gap: 20px;
+}
+
+.card-option {
+    flex: 1;
+}
+
+.card-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #A1E3F9;
+    border-radius: 16px;
+    cursor: pointer;
+    border: 3px solid transparent;
+    transition: border-color 0.3s, background-color 0.3s;
+    text-align: center;
+    height: 180px;
+}
+
+.card-label img {
+    height: 80px;
+    margin-bottom: 15px;
+}
+
+.card-label span {
+    font-weight: 600;
+    font-size: 16px;
+    color: #333;
+    white-space: nowrap;
+}
+
+/* KUNCI UTAMA: Style untuk card saat radio button yang terhubung dipilih */
+.card-option input[type="radio"]:checked + .card-label {
+
+    border-color: #0d6efd; /* Warna biru untuk menandakan pilihan aktif */
+}
+
+/* Tombol Continue */
+.continue-button {
+    width: 100%;
+    padding: 18px;
+    margin-top: 40px;
+    border: none;
+    background-color: #A1E3F9;
+    color: #000;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.continue-button:hover {
+    background-color: #A1E3F9;
+}
