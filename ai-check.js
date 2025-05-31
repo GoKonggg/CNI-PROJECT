@@ -9,7 +9,7 @@ const sourcesCard = document.querySelector('.sources-card ul');
 const checkAnotherButton = document.getElementById('check-another-button');
 
 // 🔑 API Key (gunakan hanya untuk prototyping — GANTI DENGAN MILIKMU SENDIRI)
-const OPENAI_API_KEY = "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"; // GANTI dengan milikmu
+const OPENAI_API_KEY = "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"; // GANTI dengan milikmu
 
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
