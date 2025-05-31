@@ -1,3 +1,5 @@
+// ai-check.js — AI Fact Checker (Frontend-only, uses GPT API directly)
+
 const form = document.getElementById('fact-check-form');
 const textarea = form.querySelector('textarea');
 const resultSection = document.getElementById('result-section');
@@ -6,8 +8,8 @@ const explanationCard = document.querySelector('.explanation-card p');
 const sourcesCard = document.querySelector('.sources-card ul');
 const checkAnotherButton = document.getElementById('check-another-button');
 
-
-const OPENAI_API_KEY = "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";  // Ganti dengan API key milikmu
+// 🔑 API Key (gunakan hanya untuk prototyping — GANTI DENGAN MILIKMU SENDIRI)
+const OPENAI_API_KEY = "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"; // GANTI dengan milikmu
 
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
@@ -22,8 +24,8 @@ form.addEventListener('submit', async (e) => {
 
 Tolong verifikasi kebenaran klaim ini secara medis dan parenting. Jawablah dengan format berikut (dan hanya dalam format ini):
 
-✅ Status Klaim: (Benar / Salah / Tidak Diketahui)
-🧠 Penjelasan: (jelaskan dengan bahasa sederhana)
+✅ Status Klaim: (Benar / Salah / Tidak Diketahui)  
+🧠 Penjelasan: (jelaskan dengan bahasa sederhana)  
 📚 Sumber: (sebutkan nama artikel dan link, atau tulis "Tidak ditemukan referensi yang disebutkan")`;
 
   try {
@@ -37,21 +39,23 @@ Tolong verifikasi kebenaran klaim ini secara medis dan parenting. Jawablah denga
         model: "gpt-4o",
         messages: [{ role: "user", content: prompt }],
         temperature: 0.2,
-        max_tokens: 500
+        max_tokens: 600
       })
     });
 
     const data = await response.json();
     const reply = data?.choices?.[0]?.message?.content || "Tidak ada jawaban.";
 
+    // Parsing hasil
     const statusMatch = reply.match(/Status Klaim:\s*(.*)/i);
     const explanationMatch = reply.match(/Penjelasan:\s*([\s\S]*?)Sumber:/i);
     const sourceMatch = reply.match(/Sumber:\s*([\s\S]*)$/i);
 
     const status = statusMatch ? statusMatch[1].trim().toLowerCase() : "tidak diketahui";
     const explanation = explanationMatch ? explanationMatch[1].trim() : reply;
-    const sources = sourceMatch ? sourceMatch[1].trim().split('\n').filter(x => x.trim()) : [];
+    const sources = sourceMatch ? sourceMatch[1].trim().split('\n').filter(Boolean) : [];
 
+    // Tampilkan status
     verdictCard.className = 'verdict-card';
     if (status.includes("salah")) {
       verdictCard.classList.add('hoax');
@@ -72,9 +76,9 @@ Tolong verifikasi kebenaran klaim ini secara medis dan parenting. Jawablah denga
     resultSection.classList.remove('hidden');
     form.parentElement.classList.add('hidden');
 
-  } catch (err) {
-    alert("Gagal memproses klaim. Coba lagi.");
-    console.error(err);
+  } catch (error) {
+    console.error("Gagal memproses:", error);
+    alert("Terjadi kesalahan. Silakan coba lagi.");
   } finally {
     button.innerText = "Cek Fakta Sekarang";
     button.disabled = false;
