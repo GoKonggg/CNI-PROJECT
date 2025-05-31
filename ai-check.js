@@ -6,7 +6,7 @@ const explanationCard = document.querySelector('.explanation-card p');
 const sourcesCard = document.querySelector('.sources-card ul');
 const checkAnotherButton = document.getElementById('check-another-button');
 
-// 👇 Taruh API key kamu di sini (sementara, untuk demo pribadi)
+
 const OPENAI_API_KEY = "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";  // Ganti dengan API key milikmu
 
 form.addEventListener('submit', async (e) => {
